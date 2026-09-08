@@ -1,6 +1,6 @@
 ---
 name: academic-pipeline
-description: Orchestrate an end-to-end academic workflow from research-question refinement through literature research, methodology alignment, paper planning, drafting, peer review, revision, and finalization. Use when the user explicitly wants a full research-to-paper pipeline or asks to continue a multi-stage academic project across phases. Preserve human decision points and never fabricate evidence, methods, or results.
+description: Orchestrate an end-to-end academic workflow from research-question refinement through literature research, methodology alignment, systematic review or evidence synthesis when relevant, paper planning, drafting, peer review, revision, and finalization. Use when the user explicitly wants a full research-to-paper pipeline or asks to continue a multi-stage academic project across phases. Preserve human decision points and never fabricate evidence, methods, results, approval statuses, or statistical outputs.
 ---
 
 # Academic Pipeline — Perplexity Edition
@@ -19,6 +19,10 @@ All stages inherit the platform-neutral research rules in:
 - `../shared/references/argumentation-and-writing-core.md`
 - `../shared/references/qualitative-and-reflexive-research.md`
 - `../shared/references/cross-document-consistency.md`
+- `../shared/references/systematic-review-and-risk-of-bias.md`
+- `../shared/references/meta-analysis-and-certainty.md`
+- `../shared/references/research-ethics-and-human-subjects.md`
+- `../shared/references/apa-citation-and-output.md`
 
 These references define research behavior. Perplexity-native tools define execution mechanics.
 
@@ -44,7 +48,17 @@ Required behaviors:
 
 Checkpoint: do not proceed to strong claims if key evidence is E5 or materially contradictory without surfacing the conflict.
 
-### Stage 2.5 — Integrity gate
+### Stage 2.5 — Systematic-review / risk-of-bias branch
+When the project is a systematic review or structured evidence synthesis:
+- freeze or clearly document the protocol status;
+- retain transparent search/screening accounting;
+- select the correct RoB framework by study design;
+- preserve signaling-question evidence and domain judgments;
+- keep relevance, RoB, reporting completeness, and certainty distinct.
+
+Do not describe post-hoc decisions as preregistered or prospective.
+
+### Stage 3 — Integrity gate
 Audit:
 - citation existence
 - claim–source alignment
@@ -58,7 +72,7 @@ Audit:
 
 A failed integrity gate blocks downstream polishing until resolved.
 
-### Stage 3 — Methodology alignment
+### Stage 4 — Methodology alignment
 Apply `research-methodology-auditor` logic:
 RQ → theory → constructs → operationalization → design → participants/sampling → instruments/data → timing → analysis → findings → conclusion.
 
@@ -73,9 +87,11 @@ For qualitative studies also audit:
 - member-reflection/checking claims
 - saturation/informational-adequacy language
 
+For review/meta-analysis designs also audit protocol, eligibility, RoB, pooling feasibility, effect metrics, heterogeneity, sensitivity analysis, and certainty logic.
+
 Checkpoint: if an RQ cannot be answered by the available data or design, surface it before drafting results/discussion.
 
-### Stage 4 — Analysis and synthesis
+### Stage 5 — Analysis and synthesis
 For literature-based research, synthesize across sources rather than summarize sequentially. Preserve contradiction, compare methods and contexts, identify gaps, and distinguish evidence from inference.
 
 For qualitative empirical research, preserve the audit chain:
@@ -83,12 +99,32 @@ raw data → code → category → theme/analytic concept → interpretation →
 
 Do not use frequency alone as thematic importance.
 
-### Stage 5 — Paper construction
+For quantitative evidence synthesis:
+- assess feasibility before pooling;
+- harmonize effect metrics transparently;
+- investigate heterogeneity;
+- conduct/plan sensitivity analysis;
+- integrate RoB;
+- assess certainty by outcome.
+
+If valid computation or complete extracted data are unavailable, do not fabricate meta-analytic statistics; use a structured narrative synthesis or analysis specification.
+
+### Stage 6 — Paper construction
 Apply `academic-paper` logic to build architecture, argument maps, and manuscript sections from verified evidence and declared methods/results.
 
-Before drafting major blocks, use claim-intent precommitment. Preserve protected hedges, positionality statements, scope limitations, and temporal qualifiers.
+Before drafting major blocks, use claim-intent precommitment. Preserve protected hedges, positionality statements, scope limitations, temporal qualifiers, and systematic-review reporting distinctions.
 
-### Stage 5.5 — Cross-document consistency gate
+### Stage 6.5 — Ethics and human-subjects boundary gate
+When applicable, verify:
+- material AI-assistance disclosure;
+- attribution integrity;
+- data-ethics and privacy claims;
+- researcher dual-role/positionality disclosures;
+- documented vs unverified ethics approval, exemption, consent, anonymity, or authorization claims.
+
+If authority or institutional status is unresolved, retain `institutional determination required` rather than manufacturing a review pathway or approval status.
+
+### Stage 7 — Cross-document consistency gate
 Compare relevant artifacts:
 - abstract ↔ results
 - discussion ↔ results
@@ -99,7 +135,7 @@ Compare relevant artifacts:
 
 Surface `POTENTIAL_INCONSISTENCY_LOCATED` or `NO_LISTED_INCONSISTENCY_LOCATED` as advisory observations only. The latter is never proof of complete consistency.
 
-### Stage 6 — Peer review
+### Stage 8 — Peer review
 Apply `academic-paper-reviewer` logic from multiple perspectives. Separate Critical, Major, and Minor issues.
 
 Require explicit attention to:
@@ -108,9 +144,11 @@ Require explicit attention to:
 - source verification
 - causal/inferential overreach
 - qualitative rigor and reflexivity where applicable
+- systematic-review/RoB/meta-analysis integrity where applicable
+- ethics/reporting boundaries
 - cross-document inconsistencies
 
-### Stage 7 — Revision planning
+### Stage 9 — Revision planning
 Create a revision matrix:
 - reviewer/audit concern
 - severity
@@ -119,21 +157,24 @@ Create a revision matrix:
 - evidence or new data required
 - author decision required?
 - claim-strength/hedge impact
+- ethics/reporting impact
 - completion status
 
-### Stage 8 — Revision
+### Stage 10 — Revision
 Resolve validity and evidence issues before stylistic polishing. Preserve an audit trail of consequential changes.
 
 Never silently:
 - change an RQ
 - redefine a construct
 - alter sample scope
-- change analytic strategy
+- change analytic strategy or synthesis model
 - strengthen or weaken a claim rung
 - remove a protected hedge
 - convert researcher interpretation into participant evidence
+- invent ethics/authorization status
+- invent meta-analysis values
 
-### Stage 9 — Final verification
+### Stage 11 — Final verification
 Check:
 - each RQ is answered or explicitly unresolved
 - findings and conclusions stay within inferential boundaries
@@ -141,12 +182,22 @@ Check:
 - source-existence issues are resolved or disclosed
 - qualitative findings remain traceable to data where applicable
 - triangulation claims are justified
+- systematic-review/RoB/meta-analysis claims are traceable and correctly bounded
+- ethics/human-subjects statements do not exceed documented authority
 - limitations are disclosed
 - terminology, numbers, and sample descriptions are consistent
 - references are complete to the extent source data allows
 
-### Stage 10 — Finalization
-Format for the requested venue/output using capabilities available on the platform. Do not assume local Pandoc, LaTeX, Python, shell hooks, or Claude-specific validators.
+### Stage 12 — Finalization
+Use formatting precedence:
+1. user instructions;
+2. target venue/institution rules;
+3. requested style manual;
+4. shared APA/output fallback.
+
+Reconcile in-text citations and reference list, abstract/results, narrative/tables/figures, and final terminology before delivery.
+
+Format using capabilities actually available on Perplexity. Do not assume local Pandoc, LaTeX, Python, Word automation, shell hooks, or Claude-specific validators.
 
 ## Orchestration rules
 
@@ -158,7 +209,7 @@ Perplexity may dispatch parallel sub-agents for independent research or review t
 
 Do not average away meaningful disagreement.
 
-Use the smallest necessary workflow. If the user asks only for literature research, review, methodology audit, or a single section, route to that function instead of running the entire pipeline.
+Use the smallest necessary workflow. If the user asks only for literature research, review, methodology audit, systematic-review appraisal, or a single section, route to that function instead of running the entire pipeline.
 
 ## Evidence policy
 
@@ -178,9 +229,12 @@ Require or preserve human judgment for:
 - sampling and participant inclusion decisions
 - construct operationalization
 - analytic strategy
+- systematic-review eligibility decisions when ambiguous
+- meta-analysis pooling/model decisions when multiple defensible choices exist
 - interpretation of ambiguous findings
 - acceptance/rejection of reviewer recommendations that alter the research position
 - adjudication of meaningful cross-document contradictions
+- institutional ethics/authorization decisions
 
 If the user already decided these, do not reopen them unless a concrete inconsistency or integrity problem appears.
 
@@ -192,4 +246,4 @@ At any stage, report:
 - unresolved Critical/Major issues
 - next defensible action
 
-Do not claim that an empirical procedure was performed, data were collected, sources were fully searched, or results reproduced unless the user or verified source explicitly establishes that fact.
+Do not claim that an empirical procedure was performed, data were collected, sources were fully searched, results reproduced, ethics approval obtained, or meta-analysis computed unless the user or verified source explicitly establishes that fact.
