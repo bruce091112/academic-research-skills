@@ -94,16 +94,138 @@ Adapted into:
 - `perplexity/shared/references/review-and-methods-core.md`
 
 ### 8. Human-subjects authority boundary
-Source concept: `shared/references/human_subjects_authority_protocol.md`
+Source concepts:
+- `shared/references/human_subjects_authority_protocol.md`
+- `deep-research/references/ethics_checklist.md`
 
 Preserved at principle level:
-- do not infer jurisdiction/applicability from locale, affiliation, filename, or model memory;
+- do not infer jurisdiction/applicability from locale, affiliation, filename, language, or model memory;
 - unknown is not false;
 - authority sources are bounded, not complete legal advice;
-- no unsupported claims of ethics approval, exemption, compliance, or institutional acceptance.
+- no unsupported claims of ethics approval, exemption, consent sufficiency, compliance, or institutional acceptance;
+- AI disclosure, attribution, data ethics, COI, fair representation, dual-role reflexivity, and reproducibility remain explicit concerns.
 
 Adapted into:
+- `perplexity/shared/references/research-ethics-and-human-subjects.md`
 - `perplexity/shared/references/review-and-methods-core.md`
+
+### 9. Literature search and screening
+Source concepts:
+- `deep-research/agents/bibliography_agent.md`
+- associated search/screening references.
+
+Preserved:
+- systematic rather than ad-hoc searching;
+- predeclared inclusion/exclusion criteria;
+- two-pass screening;
+- corpus-first/search-fills-gap logic;
+- deduplication;
+- PRISMA-style accounting;
+- distributional coverage/skew advisory;
+- search reproducibility and limitations.
+
+Adapted into:
+- `perplexity/shared/references/literature-search-and-screening.md`
+
+### 10. Source verification and citation integrity
+Source concepts:
+- `deep-research/agents/source_verification_agent.md`
+- evidence-row and bibliographic integrity mechanisms.
+
+Preserved:
+- source existence distinct from claim support;
+- DOI/metadata mismatch detection concept;
+- retraction/correction/supersession awareness;
+- conflict-of-interest/funding context;
+- abstract-level vs full-text evidence distinction;
+- no fabricated bibliographic completion.
+
+Adapted into:
+- `perplexity/shared/references/source-verification-and-citation.md`
+
+### 11. Qualitative and reflexive research
+Source concepts:
+- methodology and qualitative guidance across deep-research and review logic;
+- reflexivity/positionality protection mechanisms.
+
+Preserved:
+- RQ-method fit;
+- sampling rationale;
+- coding traceability;
+- raw data → code → category/theme → interpretation chain;
+- negative cases;
+- reflexivity and researcher dual roles;
+- triangulation as distinct evidence perspectives rather than a form count;
+- member-checking/reflection and saturation claims kept appropriately bounded.
+
+Adapted into:
+- `perplexity/shared/references/qualitative-and-reflexive-research.md`
+
+### 12. Argumentation and academic writing
+Source concepts:
+- `deep-research/references/argumentation_reasoning_framework.md`
+- `academic-paper/references/academic_writing_style.md`
+
+Preserved:
+- Toulmin claim/evidence/warrant/qualifier/rebuttal logic;
+- alternative-explanation testing;
+- causal-inference restraint;
+- epistemic calibration;
+- discipline-sensitive academic register;
+- Traditional Chinese academic-writing guidance at principle level.
+
+Adapted into:
+- `perplexity/shared/references/argumentation-and-writing-core.md`
+
+### 13. Systematic review and risk of bias
+Source concept:
+- `deep-research/agents/risk_of_bias_agent.md`
+
+Preserved:
+- study-design classification before tool selection;
+- RoB 2 / ROBINS-I instrument fidelity;
+- signaling questions before judgments;
+- evidence for each domain judgment;
+- no ad-hoc numeric quality score;
+- study-level RoB informs but does not silently determine synthesis inclusion.
+
+Adapted into:
+- `perplexity/shared/references/systematic-review-and-risk-of-bias.md`
+
+### 14. Meta-analysis and certainty
+Source concept:
+- `deep-research/agents/meta_analysis_agent.md`
+
+Preserved:
+- feasibility before pooling;
+- effect-size harmonization;
+- heterogeneity investigation;
+- subgroup/sensitivity transparency;
+- publication-bias caution;
+- outcome-specific certainty assessment;
+- structured narrative-synthesis fallback;
+- no-runtime/no-data rule against fabricated statistics.
+
+Adapted into:
+- `perplexity/shared/references/meta-analysis-and-certainty.md`
+
+### 15. APA, citation, and output rules
+Source concepts:
+- `academic-paper/references/apa7_extended_guide.md`
+- related APA/citation-format references.
+
+Preserved:
+- target venue/institution overrides generic style fallback;
+- citation integrity precedes formatting;
+- APA 7 fallback principles;
+- statistics/table/figure consistency;
+- abstract must match the manuscript;
+- in-text/reference-list reconciliation;
+- Traditional Chinese output considerations;
+- platform capability boundary for artifact generation.
+
+Adapted into:
+- `perplexity/shared/references/apa-citation-and-output.md`
 
 ## B. Preserved as concepts, but not ported literally
 
@@ -111,7 +233,7 @@ These mechanisms are valuable, but the original implementation is tightly couple
 
 - SHA-256 binding of every intermediate artifact;
 - exact JSON schema carriers and passport objects;
-- repository-specific `phase_e_claim_verification` carriers;
+- repository-specific evidence-row carrier schemas;
 - exact byte-span replay machinery;
 - cache replay contracts;
 - deterministic builder scripts;
@@ -137,6 +259,7 @@ Reason: these are execution-shell mechanisms, not the research engine itself.
 - mandatory LaTeX runtime
 - assumed local Python scripts
 - filesystem watchers / persistent local caches
+- mandatory local statistical software for meta-analysis
 
 ### Repository CI enforcement
 - exact mirror-sync linters
@@ -152,8 +275,9 @@ Original execution mechanism → Perplexity Edition replacement:
 - Claude subagent call → role/task delegation instructions for Perplexity Computer
 - shell routing → skill `description` + explicit workflow classification
 - deterministic local web/API scripts → Perplexity search/retrieval with provenance rules
-- local formatter pipeline → Perplexity artifact/document output, preserving academic structure
-- repo-specific gates → visible human checkpoints and advisory findings
+- local formatter pipeline → Perplexity artifact/document output when actually available
+- repo-specific gates → visible research-integrity checkpoints and advisory findings
+- local meta-analysis runtime → compute only when valid platform computation and complete data are available; otherwise emit analysis specification/narrative synthesis
 
 ## E. Current v1 skill set
 
@@ -165,18 +289,27 @@ Original execution mechanism → Perplexity Edition replacement:
 
 Shared references:
 - `research-integrity-core.md`
+- `literature-search-and-screening.md`
+- `source-verification-and-citation.md`
+- `qualitative-and-reflexive-research.md`
+- `argumentation-and-writing-core.md`
 - `cross-document-consistency.md`
 - `review-and-methods-core.md`
+- `systematic-review-and-risk-of-bias.md`
+- `meta-analysis-and-certainty.md`
+- `research-ethics-and-human-subjects.md`
+- `apa-citation-and-output.md`
 
-## F. Next migration pass
+## F. Dependency-closure status
 
-Before packaging, inspect and selectively port additional reusable content from:
-- citation/source-verification protocols;
-- literature search and screening guidance;
-- argument-building guidance;
-- qualitative-research and reflexivity guidance;
-- writing-quality and revision rules;
-- review rubrics and failure-mode catalogs;
-- templates that remain platform-neutral.
+Research-engine migration for v1 is now substantially closed at the methodology layer. The five skills explicitly consume the shared references relevant to their roles.
 
-Do not package until each skill is self-contained and its required references are copied into that skill's own `references/` folder.
+Still required before Perplexity upload testing:
+1. copy only the references needed by each skill into that skill's own package directory;
+2. ensure every package has `SKILL.md` at ZIP root;
+3. remove relative paths that point outside the ZIP;
+4. check each package against Perplexity's current upload-size and frontmatter requirements;
+5. run scenario tests for routing, literature search, methodology audit, review, systematic review, and end-to-end pipeline behavior;
+6. compare outputs against the original engine on a small benchmark set.
+
+Do not merge this branch into `main` merely to test Perplexity packaging. Keep the platform edition isolated until the tests are satisfactory.
