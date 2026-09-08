@@ -18,6 +18,10 @@ Apply these platform-neutral rules whenever relevant:
 - `../shared/references/qualitative-and-reflexive-research.md` for qualitative studies
 - `../shared/references/cross-document-consistency.md` for abstract/results, methods/results, preregistration/manuscript, or multi-artifact consistency
 - `../shared/references/review-and-methods-core.md`
+- `../shared/references/systematic-review-and-risk-of-bias.md` when drafting or revising systematic reviews
+- `../shared/references/meta-analysis-and-certainty.md` when pooled estimates, narrative synthesis, heterogeneity, or certainty of evidence are reported
+- `../shared/references/research-ethics-and-human-subjects.md` for ethics, AI disclosure, data governance, human-subjects, and positionality boundaries
+- `../shared/references/apa-citation-and-output.md` for APA/citation/output formatting
 
 ## Modes
 
@@ -87,8 +91,9 @@ Draft section by section. Preserve:
 - distinction between result and interpretation
 - consistent terminology
 - qualitative positionality/reflexivity disclosures when methodologically relevant
+- systematic-review protocol, screening, RoB, heterogeneity, and certainty distinctions when relevant
 
-Never invent citations, DOI/page numbers, participant details, methods performed, statistical results, quotations, or approvals.
+Never invent citations, DOI/page numbers, participant details, methods performed, statistical results, quotations, approval statuses, pooled estimates, or forest-plot values.
 
 ### Phase 5 — Citation and integrity check
 Check that every substantive sourced claim has an appropriate citation and that the cited source supports the exact nearby claim. Flag citation-by-association, overstatement, source-existence problems, and missing evidence.
@@ -103,6 +108,8 @@ Run a reviewer pass on:
 - limitations
 - writing quality
 - qualitative rigor/reflexivity where applicable
+- systematic-review/RoB/meta-analysis reporting integrity where applicable
+- ethics/human-subjects boundary claims where applicable
 
 For major methodological concerns, apply `research-methodology-auditor` logic.
 
@@ -122,8 +129,9 @@ Prioritize revisions in this order:
 2. RQ/design/evidence alignment
 3. argument gaps
 4. citation problems
-5. structure
-6. style and formatting
+5. ethics/disclosure or reporting-integrity problems
+6. structure
+7. style and formatting
 
 Do not silently move claims up or down the claim-strength ladder. Do not polish prose before resolving validity problems when both are present.
 
@@ -131,10 +139,26 @@ Do not silently move claims up or down the claim-strength ladder. Do not polish 
 
 Prefer precise academic prose over inflated importance claims, repetitive framing, generic transitions, and unsupported novelty language. Match the user's established academic voice when examples are available. Protect epistemic, scope, reflexive, and temporal qualifiers under word-count pressure.
 
+## Formatting and output
+
+Use this precedence:
+1. explicit user instructions;
+2. target institution/journal/conference requirements;
+3. current requested style manual (e.g., APA 7);
+4. fallback rules in `apa-citation-and-output.md`.
+
+Formatting never repairs unsupported claims. Reconcile in-text citations with the reference list, keep abstract and manuscript findings consistent, and verify tables/figures against narrative values.
+
+If the user asks for a document artifact, use Perplexity's actual available document/output capabilities rather than assuming local Pandoc, LaTeX, Word, Python, or shell tools exist.
+
+## Ethics and human-subjects boundary
+
+When applicable, disclose material AI assistance and preserve data-ethics, researcher-role, participant-information, and institutional-authorization boundaries. Do not write that a study is exempt, approved, compliant, or authorized unless explicit current evidence supports that exact status.
+
 ## Output
 
-Deliver the requested manuscript content plus, when useful, a concise note of unresolved evidence gaps, consistency issues, or author decisions. If the user asks for a document artifact, use Perplexity's available document/output capabilities rather than assuming local Pandoc, LaTeX, or Python exists.
+Deliver the requested manuscript content plus, when useful, a concise note of unresolved evidence gaps, consistency issues, ethics/reporting boundaries, or author decisions.
 
 ## Human checkpoint
 
-Do not silently change the research question, theoretical stance, sample definition, construct operationalization, analytic strategy, or interpretation of ambiguous findings. Propose the smallest defensible change and let the author decide unless they explicitly authorize revision.
+Do not silently change the research question, theoretical stance, sample definition, construct operationalization, analytic strategy, synthesis model, or interpretation of ambiguous findings. Propose the smallest defensible change and let the author decide unless they explicitly authorize revision.
