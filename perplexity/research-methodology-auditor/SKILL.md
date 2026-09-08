@@ -1,6 +1,6 @@
 ---
 name: research-methodology-auditor
-description: Audit the internal alignment of an academic study across research questions, theory, constructs, intervention or design, instruments, data sources, analysis, findings, and conclusions. Use when the user asks whether a study design is coherent, whether tools can answer the RQs, whether measures operationalize constructs, whether qualitative coding and triangulation are adequate, or where the research logic chain breaks.
+description: Audit the internal alignment of an academic study across research questions, theory, constructs, intervention or design, instruments, data sources, analysis, findings, and conclusions. Use when the user asks whether a study design is coherent, whether tools can answer the RQs, whether measures operationalize constructs, whether qualitative coding and triangulation are adequate, whether a review/meta-analysis design is defensible, or where the research logic chain breaks.
 ---
 
 # Research Methodology Auditor — Perplexity Edition
@@ -18,6 +18,9 @@ Apply these platform-neutral rules whenever relevant:
 - `../shared/references/cross-document-consistency.md`
 - `../shared/references/source-verification-and-citation.md` when external methodological claims are cited
 - `../shared/references/argumentation-and-writing-core.md` for inference and causal-language checks
+- `../shared/references/systematic-review-and-risk-of-bias.md` for systematic-review/RoB designs
+- `../shared/references/meta-analysis-and-certainty.md` for quantitative synthesis plans
+- `../shared/references/research-ethics-and-human-subjects.md` for ethics, researcher-role, data, and human-subjects boundaries
 
 ## Core audit chain
 
@@ -108,7 +111,46 @@ For each triangulated claim, show:
 
 Do not force agreement; divergence may be analytically meaningful.
 
-### 8. Cross-document consistency
+### 8. Systematic review and risk-of-bias alignment
+When the study is a systematic review, audit:
+- review question framework;
+- protocol/preregistration status;
+- search and eligibility design;
+- screening reproducibility;
+- data-extraction plan;
+- study-design-specific RoB tool selection;
+- signaling-question evidence;
+- synthesis plan;
+- reporting-guideline claims.
+
+Do not allow a post-hoc review process to be described as prospectively specified.
+
+### 9. Meta-analysis alignment
+When pooling is planned or reported, audit:
+- comparability before pooling;
+- effect metric choice;
+- data sufficiency;
+- model choice;
+- heterogeneity interpretation;
+- subgroup/sensitivity logic;
+- study-level RoB integration;
+- outcome-specific certainty assessment;
+- narrative-synthesis fallback when pooling is inappropriate.
+
+Flag any pooled statistic that cannot be traced to supplied extractable data and a defensible computation.
+
+### 10. Ethics and human-subjects boundary
+When relevant, check whether the study correctly distinguishes:
+- methodological/participant-facing drafting quality;
+- institutional review or authorization;
+- consent documentation vs legal/institutional sufficiency;
+- anonymity/de-identification claims vs actual data flow;
+- researcher positionality and power relationships;
+- AI-assisted research disclosure and human verification.
+
+If authority or review status is unresolved, preserve `institutional determination required` rather than inventing a pathway or approval status.
+
+### 11. Cross-document consistency
 When multiple study artifacts are available, compare:
 - stated RQs across proposal, thesis, protocol, instruments, and analysis plan
 - construct definitions across chapters and tools
@@ -119,7 +161,7 @@ When multiple study artifacts are available, compare:
 
 Use `POTENTIAL_INCONSISTENCY_LOCATED` and `NO_LISTED_INCONSISTENCY_LOCATED` only as advisory labels; the latter is not proof of completeness.
 
-### 9. Inference boundary
+### 12. Inference boundary
 Label claims:
 - supported directly by collected data
 - supported indirectly
@@ -148,13 +190,15 @@ Default output:
 4. instrument and data-source coverage gaps
 5. qualitative/reflexive risks when applicable
 6. triangulation assessment
-7. cross-document consistency observations
-8. inference risks
-9. recommended corrections in priority order
-10. items requiring human research judgment
+7. systematic-review/meta-analysis design risks when applicable
+8. ethics/human-subjects boundary issues when applicable
+9. cross-document consistency observations
+10. inference risks
+11. recommended corrections in priority order
+12. items requiring human research judgment
 
 Prefer specific diagnostics such as “RQ2 has no independent post-intervention evidence” over generic statements such as “strengthen methodology.”
 
 ## Human checkpoint
 
-Do not silently rewrite the user's RQs, theoretical framework, sample, construct definitions, or analytic strategy. When a change is needed, explain the mismatch, propose the smallest defensible correction, and leave the consequential research choice to the user unless they explicitly ask for a revision.
+Do not silently rewrite the user's RQs, theoretical framework, sample, construct definitions, analytic strategy, review protocol, or synthesis model. When a change is needed, explain the mismatch, propose the smallest defensible correction, and leave the consequential research choice to the user unless they explicitly ask for a revision.
