@@ -9,6 +9,18 @@ description: Conduct rigorous academic literature research, source verification,
 
 Build a trustworthy evidence base before writing conclusions. Search broadly, verify narrowly, and keep claims traceable to sources.
 
+## Required shared references
+
+Apply these platform-neutral rules whenever relevant:
+- `../shared/references/research-integrity-core.md`
+- `../shared/references/literature-search-and-screening.md`
+- `../shared/references/source-verification-and-citation.md`
+- `../shared/references/argumentation-and-writing-core.md`
+- `../shared/references/qualitative-and-reflexive-research.md` for qualitative evidence or qualitative synthesis
+- `../shared/references/cross-document-consistency.md` when comparing manuscripts, preregistrations, protocols, instruments, or multiple research artifacts
+
+If a shared reference conflicts with platform-specific mechanics, preserve the research principle and use Perplexity-native execution.
+
 ## Intake
 
 Identify, without unnecessary questioning:
@@ -23,13 +35,7 @@ If the question is too broad to search coherently, propose a bounded working que
 
 ## Evidence hierarchy
 
-Prefer, in order:
-1. peer-reviewed original research and systematic reviews/meta-analyses
-2. official government, university, standards, professional-association, or institutional sources
-3. scholarly books and authoritative reference works
-4. high-quality secondary sources for context only
-
-Do not use SEO pages, unsourced summaries, commercial blogs, or AI-generated summaries as primary scholarly evidence.
+Use the context-sensitive evidence logic in the shared source-verification reference. Do not treat a single universal study-design hierarchy as valid across all disciplines or claim types.
 
 Classify substantive claims:
 - E1 Direct scholarly support
@@ -51,9 +57,9 @@ Break the question into concepts, synonyms, populations, outcomes, mechanisms, a
 - contrary/negative evidence
 - source verification
 
-Search beyond the first result page or first framing when the issue is contested or interdisciplinary.
+Search beyond the first result page or first framing when the issue is contested or interdisciplinary. Follow `literature-search-and-screening.md` for reproducibility, two-pass screening, corpus-first/search-fills-gap behavior, deduplication, PRISMA-style accounting, and coverage-distribution checks.
 
-### Phase 2 — Source screening
+### Phase 2 — Source screening and verification
 
 For each important source, assess:
 - relevance to the exact claim
@@ -62,8 +68,13 @@ For each important source, assess:
 - date
 - methods and limitations
 - whether the source is primary or secondary
+- reference existence / identifier consistency
+- retraction, correction, or supersession status when material
+- conflict-of-interest or funding context when relevant
 
 Do not infer a paper's conclusion from title or abstract wording alone when the full text or sufficient source detail is available.
+
+Separate source existence from claim support. A real paper can still fail to support the claim attributed to it.
 
 ### Phase 3 — Claim–evidence matrix
 
@@ -72,8 +83,11 @@ Organize findings around claims rather than around a list of papers. For each ma
 - supporting sources
 - contradicting/qualifying sources
 - evidence level E1–E5
+- verification state
 - limitations
 - confidence
+
+For consequential claims, maintain an evidence-row-style trace following `research-integrity-core.md`.
 
 ### Phase 4 — Synthesis
 
@@ -84,6 +98,10 @@ Synthesize agreements, disagreements, mechanisms, boundary conditions, and gaps.
 - plausible inference
 - unresolved questions
 
+Integration must go beyond sequential source summaries. Preserve contradiction, compare methods and contexts, and avoid majority-vote logic based only on source count.
+
+For qualitative literature, follow `qualitative-and-reflexive-research.md` and avoid treating frequency alone as thematic importance.
+
 ### Phase 5 — Verification gate
 
 Before finalizing:
@@ -91,18 +109,22 @@ Before finalizing:
 - confirm that cited sources support the exact nearby claim
 - check dates, sample/context, and direction of findings
 - flag citation-by-association or overstatement
+- check claim-strength drift and protected hedges
 - state when evidence is thin or conflicting
+- distinguish abstract-level evidence from full-text evidence
 
 ## Output
 
 Default structure:
 1. research question / scope
 2. concise answer
-3. evidence synthesis by theme
-4. conflicting or limiting evidence
-5. evidence gaps
-6. claim–evidence summary
-7. references/citations supplied by the platform
+3. search and screening summary when relevant
+4. evidence synthesis by theme
+5. conflicting or limiting evidence
+6. evidence gaps
+7. claim–evidence summary
+8. verification limitations
+9. references/citations supplied by the platform
 
 Do not fabricate DOI, page numbers, quotations, statistics, or bibliographic details.
 
