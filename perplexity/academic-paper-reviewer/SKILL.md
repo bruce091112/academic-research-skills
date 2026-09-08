@@ -9,6 +9,16 @@ description: Perform rigorous structured peer review of academic manuscripts, th
 
 Review the manuscript as a demanding but fair academic reviewer. Diagnose weaknesses, test claims against evidence, and produce actionable revision priorities.
 
+## Required shared references
+
+Apply these platform-neutral rules whenever relevant:
+- `../shared/references/research-integrity-core.md`
+- `../shared/references/source-verification-and-citation.md`
+- `../shared/references/review-and-methods-core.md`
+- `../shared/references/argumentation-and-writing-core.md`
+- `../shared/references/qualitative-and-reflexive-research.md` for qualitative studies
+- `../shared/references/cross-document-consistency.md`
+
 ## Review perspectives
 
 When the manuscript warrants depth, divide review work across complementary perspectives:
@@ -40,13 +50,14 @@ For each central claim, ask:
 - does the cited source or reported result support the exact claim?
 - is the claim stronger than the data?
 - are alternative explanations addressed?
+- has revision silently changed the claim-strength rung or dropped a protected hedge?
 
 Use evidence labels E1–E5 when external literature is involved.
 
 ### 5. Literature and citations
 Check whether key literature streams are represented, recent work is incorporated where needed, contrary findings are acknowledged, and citations are attached to the claims they actually support.
 
-Never invent missing references.
+Distinguish reference existence from claim support. Never invent missing references.
 
 ### 6. Results and interpretation
 Separate reported findings from interpretation. Flag:
@@ -56,11 +67,34 @@ Separate reported findings from interpretation. Flag:
 - cherry-picking or unaddressed negative cases
 - mismatch between tables/figures and narrative
 
-### 7. Structure and writing
+### 7. Qualitative rigor
+When applicable, inspect:
+- sampling logic and adequacy rationale
+- data-generation transparency
+- coding traceability
+- theme development
+- negative cases
+- reflexivity and researcher positionality
+- triangulation quality
+- distinction between participant evidence and researcher interpretation
+
+Do not require every qualitative technique mechanically; assess fit to the declared approach.
+
+### 8. Cross-document consistency
+When the relevant artifacts are available, compare:
+- abstract ↔ results
+- discussion ↔ results
+- methods ↔ reported analyses
+- preregistration/protocol ↔ manuscript
+- RQ ↔ instrument/data ↔ analysis ↔ conclusion
+
+A no-listed-inconsistency result is advisory, not proof of completeness or perfect agreement.
+
+### 9. Structure and writing
 Assess logical progression, section function, redundancy, terminology consistency, academic register, and whether headings and transitions reflect the argument rather than merely organizing topics.
 
-### 8. Limitations and integrity
-Check whether important limitations are disclosed and whether the manuscript overstates verification, reproducibility, causality, representativeness, or novelty.
+### 10. Limitations and integrity
+Check whether important limitations are disclosed and whether the manuscript overstates verification, reproducibility, causality, representativeness, novelty, saturation, triangulation, or authorization.
 
 ## Severity model
 
@@ -80,8 +114,9 @@ Default structure:
 4. Major issues
 5. Minor issues
 6. claim–evidence or RQ alignment concerns
-7. prioritized revision sequence
-8. optional scorecard if useful
+7. cross-document consistency concerns when applicable
+8. prioritized revision sequence
+9. optional scorecard if useful
 
 For each Critical/Major issue provide:
 - diagnosis
