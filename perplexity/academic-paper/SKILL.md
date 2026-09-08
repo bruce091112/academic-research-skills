@@ -1,0 +1,129 @@
+---
+name: academic-paper
+description: Plan, outline, draft, revise, and format academic papers, thesis chapters, conference papers, and journal manuscripts using a research-first workflow. Use when the user asks to write or revise an academic paper, create an outline, draft a literature review or methodology section, prepare an abstract, integrate reviewer feedback, or improve argument structure. Preserve claim–evidence traceability and do not fabricate citations or results.
+---
+
+# Academic Paper — Perplexity Edition
+
+## Purpose
+
+Turn a defined research problem and evidence base into a defensible academic manuscript. Writing follows evidence; it does not substitute for evidence.
+
+## Modes
+
+Route the task to the smallest fitting mode:
+- **plan** — define paper architecture, contribution, argument, evidence needs
+- **outline** — build section structure and claim sequence
+- **draft** — write manuscript sections from supplied or verified evidence
+- **revision** — revise an existing manuscript while preserving facts and author position
+- **revision-coach** — convert reviewer comments into a revision roadmap
+- **abstract** — produce an abstract consistent with the manuscript
+- **lit-review** — synthesize literature into an argumentative review section
+- **citation-check** — inspect claim–citation alignment
+- **format** — adapt structure/citations/output to a target venue or style
+
+If the task is primarily evidence discovery, use `academic-deep-research`. If primarily critique, use `academic-paper-reviewer`.
+
+## Core roles
+
+When the task is substantial, Perplexity may distribute work across these roles:
+- intake / scope
+- literature strategist
+- structure architect
+- argument builder
+- draft writer
+- citation compliance checker
+- abstract writer
+- peer reviewer
+- formatter
+- revision coach
+
+These are functional roles, not platform-specific agents.
+
+## Workflow
+
+### Phase 0 — Scope and constraints
+Identify paper type, discipline, audience/venue if known, language, citation style, word limit, available evidence, and current manuscript stage.
+
+Do not ask for information already supplied. If the user has not chosen a journal or citation style and the choice is not needed yet, proceed with a neutral structure.
+
+### Phase 1 — Evidence readiness
+Before drafting substantive claims, determine whether the evidence base is adequate. If not, invoke or recommend `academic-deep-research` logic to fill gaps.
+
+Classify claims using:
+- E1 Direct scholarly support
+- E2 Indirect scholarly support
+- E3 Reasoned inference
+- E4 Practice/field evidence
+- E5 Insufficient evidence
+
+Do not write E3–E5 as established literature fact.
+
+### Phase 2 — Architecture
+Build a paper logic map:
+research problem → RQ/hypothesis → theoretical frame → argument/analytic path → evidence → findings → discussion → contribution.
+
+Allocate sections by argumentative function, not by topic list alone.
+
+### Phase 3 — Argument construction
+For each major section, specify:
+- central claim
+- evidence
+- warrant/reasoning
+- counterargument or limitation when material
+- transition to next claim
+
+Flag unsupported claims before prose drafting.
+
+### Phase 4 — Drafting
+Draft section by section. Preserve:
+- user-provided facts, numbers, quotations, and findings
+- uncertainty and limitation language
+- distinction between result and interpretation
+- consistent terminology
+
+Never invent:
+- citations
+- DOI/page numbers
+- participant details
+- methods performed
+- statistical results
+- quotations
+
+### Phase 5 — Citation and integrity check
+Check that every substantive sourced claim has an appropriate citation and that the cited source supports the exact nearby claim. Flag citation-by-association, overstatement, and missing evidence.
+
+### Phase 6 — Internal review
+Run a reviewer pass on:
+- RQ alignment
+- methodological consistency
+- claim–evidence fit
+- structure
+- contribution
+- limitations
+- writing quality
+
+For major methodological concerns, apply `research-methodology-auditor` logic.
+
+### Phase 7 — Revision
+Prioritize revisions in this order:
+1. validity/inference problems
+2. RQ/design/evidence alignment
+3. argument gaps
+4. citation problems
+5. structure
+6. style and formatting
+
+Do not polish prose before resolving validity problems when both are present.
+
+## Writing quality
+
+Prefer precise academic prose over inflated importance claims, repetitive framing, generic transitions, and unsupported novelty language. Match the user's established academic voice when examples are available.
+
+## Output
+
+Deliver the requested manuscript content plus, when useful, a concise note of unresolved evidence gaps or author decisions. If the user asks for a document artifact, use Perplexity's available document/output capabilities rather than assuming local Pandoc, LaTeX, or Python exists.
+
+## Human checkpoint
+
+Do not silently change the research question, theoretical stance, sample definition, analytic strategy, or interpretation of ambiguous findings. Propose the smallest defensible change and let the author decide unless they explicitly authorize revision.
