@@ -9,21 +9,21 @@ description: Conduct rigorous academic literature research, source verification,
 
 Build a trustworthy evidence base before writing conclusions. Search broadly, verify narrowly, and keep claims traceable to sources.
 
-## Required shared references
+## Required package references
 
 Apply these platform-neutral rules whenever relevant:
-- `../shared/references/research-integrity-core.md`
-- `../shared/references/literature-search-and-screening.md`
-- `../shared/references/source-verification-and-citation.md`
-- `../shared/references/argumentation-and-writing-core.md`
-- `../shared/references/qualitative-and-reflexive-research.md` for qualitative evidence or qualitative synthesis
-- `../shared/references/cross-document-consistency.md` when comparing manuscripts, preregistrations, protocols, instruments, or multiple research artifacts
-- `../shared/references/systematic-review-and-risk-of-bias.md` for systematic reviews and study-level bias appraisal
-- `../shared/references/meta-analysis-and-certainty.md` for quantitative evidence synthesis or structured narrative-synthesis fallback
-- `../shared/references/research-ethics-and-human-subjects.md` when research ethics, data ethics, AI disclosure, or human-subjects issues arise
-- `../shared/references/apa-citation-and-output.md` when citation style, report formatting, tables/figures, or APA output is requested
+- `references/research-integrity-core.md`
+- `references/literature-search-and-screening.md`
+- `references/source-verification-and-citation.md`
+- `references/argumentation-and-writing-core.md`
+- `references/qualitative-and-reflexive-research.md` for qualitative evidence or qualitative synthesis
+- `references/cross-document-consistency.md` when comparing manuscripts, preregistrations, protocols, instruments, or multiple research artifacts
+- `references/systematic-review-and-risk-of-bias.md` for systematic reviews and study-level bias appraisal
+- `references/meta-analysis-and-certainty.md` for quantitative evidence synthesis or structured narrative-synthesis fallback
+- `references/research-ethics-and-human-subjects.md` when research ethics, data ethics, AI disclosure, or human-subjects issues arise
+- `references/apa-citation-and-output.md` when citation style, report formatting, tables/figures, or APA output is requested
 
-If a shared reference conflicts with platform-specific mechanics, preserve the research principle and use Perplexity-native execution.
+If a package reference conflicts with platform-specific mechanics, preserve the research principle and use Perplexity-native execution.
 
 ## Intake
 
@@ -40,7 +40,7 @@ If the question is too broad to search coherently, propose a bounded working que
 
 ## Evidence hierarchy
 
-Use the context-sensitive evidence logic in the shared source-verification reference. Do not treat a single universal study-design hierarchy as valid across all disciplines or claim types.
+Use the context-sensitive evidence logic in the package source-verification reference. Do not treat a single universal study-design hierarchy as valid across all disciplines or claim types.
 
 Classify substantive claims:
 - E1 Direct scholarly support
@@ -64,7 +64,7 @@ Break the question into concepts, synonyms, populations, outcomes, mechanisms, a
 - risk-of-bias appraisal
 - quantitative synthesis feasibility
 
-Search beyond the first result page or first framing when the issue is contested or interdisciplinary. Follow `literature-search-and-screening.md` for reproducibility, two-pass screening, corpus-first/search-fills-gap behavior, deduplication, PRISMA-style accounting, and coverage-distribution checks.
+Search beyond the first result page or first framing when the issue is contested or interdisciplinary. Follow `references/literature-search-and-screening.md` for reproducibility, two-pass screening, corpus-first/search-fills-gap behavior, deduplication, PRISMA-style accounting, and coverage-distribution checks.
 
 ### Phase 2 — Source screening and verification
 
@@ -105,7 +105,7 @@ Organize findings around claims rather than around a list of papers. For each ma
 - limitations
 - confidence
 
-For consequential claims, maintain an evidence-row-style trace following `research-integrity-core.md`.
+For consequential claims, maintain an evidence-row-style trace following `references/research-integrity-core.md`.
 
 ### Phase 4 — Synthesis
 
@@ -118,7 +118,7 @@ Synthesize agreements, disagreements, mechanisms, boundary conditions, and gaps.
 
 Integration must go beyond sequential source summaries. Preserve contradiction, compare methods and contexts, and avoid majority-vote logic based only on source count.
 
-For qualitative literature, follow `qualitative-and-reflexive-research.md` and avoid treating frequency alone as thematic importance.
+For qualitative literature, follow `references/qualitative-and-reflexive-research.md` and avoid treating frequency alone as thematic importance.
 
 ### Phase 4.5 — Meta-analysis feasibility and certainty
 
