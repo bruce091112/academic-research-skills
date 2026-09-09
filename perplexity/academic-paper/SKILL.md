@@ -9,19 +9,19 @@ description: Plan, outline, draft, revise, and format academic papers, thesis ch
 
 Turn a defined research problem and evidence base into a defensible academic manuscript. Writing follows evidence; it does not substitute for evidence.
 
-## Required shared references
+## Required package references
 
 Apply these platform-neutral rules whenever relevant:
-- `../shared/references/research-integrity-core.md`
-- `../shared/references/source-verification-and-citation.md`
-- `../shared/references/argumentation-and-writing-core.md`
-- `../shared/references/qualitative-and-reflexive-research.md` for qualitative studies
-- `../shared/references/cross-document-consistency.md` for abstract/results, methods/results, preregistration/manuscript, or multi-artifact consistency
-- `../shared/references/review-and-methods-core.md`
-- `../shared/references/systematic-review-and-risk-of-bias.md` when drafting or revising systematic reviews
-- `../shared/references/meta-analysis-and-certainty.md` when pooled estimates, narrative synthesis, heterogeneity, or certainty of evidence are reported
-- `../shared/references/research-ethics-and-human-subjects.md` for ethics, AI disclosure, data governance, human-subjects, and positionality boundaries
-- `../shared/references/apa-citation-and-output.md` for APA/citation/output formatting
+- `references/research-integrity-core.md`
+- `references/source-verification-and-citation.md`
+- `references/argumentation-and-writing-core.md`
+- `references/qualitative-and-reflexive-research.md` for qualitative studies
+- `references/cross-document-consistency.md` for abstract/results, methods/results, preregistration/manuscript, or multi-artifact consistency
+- `references/review-and-methods-core.md`
+- `references/systematic-review-and-risk-of-bias.md` when drafting or revising systematic reviews
+- `references/meta-analysis-and-certainty.md` when pooled estimates, narrative synthesis, heterogeneity, or certainty of evidence are reported
+- `references/research-ethics-and-human-subjects.md` for ethics, AI disclosure, data governance, human-subjects, and positionality boundaries
+- `references/apa-citation-and-output.md` for APA/citation/output formatting
 
 ## Modes
 
@@ -145,7 +145,7 @@ Use this precedence:
 1. explicit user instructions;
 2. target institution/journal/conference requirements;
 3. current requested style manual (e.g., APA 7);
-4. fallback rules in `apa-citation-and-output.md`.
+4. fallback rules in `references/apa-citation-and-output.md`.
 
 Formatting never repairs unsupported claims. Reconcile in-text citations with the reference list, keep abstract and manuscript findings consistent, and verify tables/figures against narrative values.
 
