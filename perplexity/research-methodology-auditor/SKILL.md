@@ -38,6 +38,17 @@ Every major RQ must have a traceable path through this chain.
 11. **Cross-document consistency** — compare RQs, construct definitions, sample definitions, instruments, methods/analyses, findings/discussion/conclusions across artifacts. Use advisory inconsistency labels only.
 12. **Inference boundary** — classify direct support, indirect support, interpretive inference, and unsupported/overextended claims. Apply claim-strength and hedge rules.
 
+## Example and rewrite safeguard
+When proposing sample wording, corrected conclusions, example methods text, or hypothetical analyses:
+- never insert an empirical fact the user did not provide, including recruitment mode, participant characteristics, significance, p-values, effect sizes, direction/magnitude of change, attrition, reliability, dates, approval/exemption status, or institutional turnaround time;
+- do not convert a plausible methodological concern into a factual statement about the user's study (for example, say “self-selection may be a concern if recruitment was voluntary,” not “the 18 participants were self-selected” unless supplied);
+- use conditional language or explicit placeholders for unknown results (for example, “[if statistically significant]”, “[insert observed direction]”, “[pending institutional determination]”);
+- if a model sentence would require an unknown fact, either omit that fact or mark it visibly as a placeholder;
+- distinguish methodological examples from claims about what actually occurred in the study;
+- do not state universal institutional/legal procedure, timelines, or required documentation unless verified for the named authority; otherwise label them as institution-dependent and recommend confirmation.
+
+A methodologically sensible example that contains invented study facts is still an integrity failure.
+
 ## Evidence labels
 When external literature is used to judge methodology:
 - E1 Direct scholarly support
